@@ -1,0 +1,63 @@
+<div class="container">
+  <div class="row">
+    <div class="text-center my-3">
+      <h3>Main Course</h3>
+    </div>
+    <div class="col-12 text-center" *ngIf="form">
+      <form [formGroup]="mainCourseForm" (ngSubmit)="save()">
+        <table style="width: 900px">
+          <tr>
+            <td><label>image</label></td>
+            <td>
+              <input type="text" class="form-control" formControlName="image" />
+            </td>
+          </tr>
+          <tr>
+            <td><label>item</label></td>
+            <td>
+              <input type="text" class="form-control" formControlName="name" />
+            </td>
+          </tr>
+          <tr>
+            <td><label>price</label></td>
+            <td>
+              <input
+                type="number"
+                class="form-control"
+                formControlName="price"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label>about</label>
+            </td>
+            <td>
+              <textarea
+                type="text"
+                class="form-control"
+                formControlName="about"
+              ></textarea>
+            </td>
+          </tr>
+
+          <button type="submit" class="btn btn-primary">submit</button>
+        </table>
+      </form>
+    </div>
+    <div
+      class="col-12 col-md-3 col-lg-4 card1"
+      *ngFor="let data of mainCourse; let i = index"
+    >
+      <img src="{{ data.image }}" class="image" />
+      <h4 class="text-center">{{ data.name }}</h4>
+
+      <div class="d-flex justify-content-between">
+        <h2>{{ data.price }}/-</h2>
+        <button (click)="add(data)" *ngIf="!addd">Add<sup>+</sup></button>
+        <button *ngIf="addd">In cart</button>
+      </div>
+      <p>{{ data.about }}</p>
+    </div>
+  </div>
+</div>

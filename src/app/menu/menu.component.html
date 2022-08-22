@@ -1,0 +1,125 @@
+<div class="container">
+  <div class="row">
+    <h3>Non veg Starters</h3>
+    <div
+      class="col-12 col-md-3 col-lg-4 card1"
+      *ngFor="let data of nonVegData; let i = index"
+    >
+      <img src="{{ data.image }}" class="image" />
+      <h4 class="text-center">{{ data.name }}</h4>
+
+      <div class="d-flex justify-content-between">
+        <h2>{{ data.price }}/-</h2>
+        <button (click)="add(data)" *ngIf="!addd">Add<sup>+</sup></button>
+        <button *ngIf="addd">View cart</button>
+      </div>
+      <p>{{ data.about }}</p>
+    </div>
+    <h3>Veg starters</h3>
+
+    <div
+      class="col-12 col-md-3 col-lg-4 card1"
+      *ngFor="let data of vegData; let i = index"
+    >
+      <img src="{{ data.image }}" class="image" />
+      <h4 class="text-center">{{ data.name }}</h4>
+
+      <div class="d-flex justify-content-between">
+        <h2>{{ data.price }}/-</h2>
+        <button (click)="add(data)" *ngIf="!addd">Add<sup>+</sup></button>
+        <button *ngIf="addd">View cart</button>
+      </div>
+      <p>{{ data.about }}</p>
+    </div>
+    <h3>Main Course</h3>
+    <div
+      class="col-12 col-md-3 col-lg-4 card1"
+      *ngFor="let data of mainCourse; let i = index"
+    >
+      <img src="{{ data.image }}" class="image" />
+      <h4 class="text-center">{{ data.name }}</h4>
+
+      <div class="d-flex justify-content-between">
+        <h2>{{ data.price }}/-</h2>
+        <button (click)="add(data)" *ngIf="!addd">Add<sup>+</sup></button>
+        <button *ngIf="addd">View cart</button>
+      </div>
+      <p>{{ data.about }}</p>
+    </div>
+    <h3>Noodles</h3>
+    <div
+      class="col-12 col-md-3 col-lg-4 card1"
+      *ngFor="let data of noodles; let i = index"
+    >
+      <img src="{{ data.image }}" class="image" />
+      <h4 class="text-center">{{ data.name }}</h4>
+
+      <div class="d-flex justify-content-between">
+        <h2>{{ data.price }}/-</h2>
+        <button (click)="add(data)" *ngIf="!addd">Add<sup>+</sup></button>
+        <button *ngIf="addd">View cart</button>
+      </div>
+      <p>{{ data.about }}</p>
+    </div>
+    <h3>Soups</h3>
+    <div
+      class="col-12 col-md-3 col-lg-4 card1"
+      *ngFor="let data of soups; let i = index"
+    >
+      <img src="{{ data.image }}" class="image" />
+      <h4 class="text-center">{{ data.name }}</h4>
+
+      <div class="d-flex justify-content-between">
+        <h2>{{ data.price }}/-</h2>
+        <button (click)="add(data)" *ngIf="!addd">Add<sup>+</sup></button>
+        <button *ngIf="addd">View cart</button>
+      </div>
+      <p>{{ data.about }}</p>
+    </div>
+    <h3>Sea Food</h3>
+    <div
+      class="col-12 col-md-3 col-lg-4 card1"
+      *ngFor="let data of seaFood; let i = index"
+    >
+      <img src="{{ data.image }}" class="image" />
+      <h4 class="text-center">{{ data.name }}</h4>
+
+      <div class="d-flex justify-content-between">
+        <h2>{{ data.price }}/-</h2>
+        <button (click)="add(data)" *ngIf="!addd">Add<sup>+</sup></button>
+        <button *ngIf="addd">View cart</button>
+      </div>
+      <p>{{ data.about }}</p>
+    </div>
+    <h3>Salad</h3>
+    <div
+      class="col-12 col-md-3 col-lg-4 card1"
+      *ngFor="let data of salad; let i = index"
+    >
+      <img src="{{ data.image }}" class="image" />
+      <h4 class="text-center">{{ data.name }}</h4>
+
+      <div class="d-flex justify-content-between">
+        <h2>{{ data.price }}/-</h2>
+        <button (click)="add(data)" *ngIf="!addd">Add<sup>+</sup></button>
+        <button *ngIf="addd">View cart</button>
+      </div>
+      <p>{{ data.about }}</p>
+    </div>
+    <h3>Deserts</h3>
+    <div
+      class="col-12 col-md-3 col-lg-4 card1"
+      *ngFor="let data of deserts; let i = index"
+    >
+      <img src="{{ data.image }}" class="image" />
+      <h4 class="text-center">{{ data.name }}</h4>
+
+      <div class="d-flex justify-content-between">
+        <h2>{{ data.price }}/-</h2>
+        <button (click)="add(data)" *ngIf="!addd">Add<sup>+</sup></button>
+        <button *ngIf="addd">View cart</button>
+      </div>
+      <p>{{ data.about }}</p>
+    </div>
+  </div>
+</div>
